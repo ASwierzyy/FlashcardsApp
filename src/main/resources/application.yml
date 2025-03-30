@@ -1,0 +1,21 @@
+spring:
+  application:
+    name:
+      FlashcardsApp
+  profiles:
+    active: "uppercase"
+  banner:
+    location: logo-app.txt
+  h2:
+    console:
+      path: /my-h2-console
+  datasource:
+    url: jdbc:h2:file:./db/entry;DATABASE_TO_UPPER=false
+    username: as
+    password: test
+  jpa:
+    show-sql: false
+    hibernate:
+      ddl-auto: update
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
